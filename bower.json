@@ -1,0 +1,26 @@
+{
+  "name": "ecanal",
+  "description": "this is a web",
+  "main": "",
+  "authors": [
+    "tmq"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "web"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "requirejs": "^2.3.3",
+    "angular": "^1.6.2"
+  }
+}
