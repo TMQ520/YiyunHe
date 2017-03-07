@@ -36,20 +36,22 @@
 }
 
 .title_info{
-    margin: 0 auto;
-    text-align: center;
+	margin: 0 auto;
+	text-align: center;
 }
 .title_info>h3 {
 	font-weight: 700;
 }
 .title_info>p {
 	background-color: #71b0fd;
-    height: 4px;
-    width: 32px;
-    margin: 23px auto;
+	height: 4px;
+	width: 32px;
+	margin: 23px auto;
 }
 .title_info>img {
 	max-width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .serverInfo{
@@ -60,8 +62,10 @@
 .serverInfo>div {
 	display: inline-block;
 	width: 150px;
+	height: 35px;
 }
 .serverInfo>.active a{
+	padding-bottom: 9px;
 	border-bottom: 2px solid #71b0fd; 
 }
 .serverInfo>div a:hover{
