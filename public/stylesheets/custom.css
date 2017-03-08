@@ -1,3 +1,7 @@
+
+body{
+	font-family: 'Microsoft Yahei',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 .navbar-brand>img{
 	width: 100px;
 	height: 40px;
@@ -38,6 +42,7 @@
 .title_info{
 	margin: 0 auto;
 	text-align: center;
+	padding-top: 60px;
 }
 .title_info>h3 {
 	font-weight: 700;
@@ -77,4 +82,61 @@
 }
 .row-first{
 	text-align: center;
+}
+
+.container>.row .section>p{
+	border-right: 3px solid #71b0fd;
+}
+.container>.row .News>.row>h3{
+	font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+	.container>.row .section>p{
+		font-size: 14px;
+	}
+	.container>.row .section .row>h6{
+		font-size: 14px;
+	}
+	.container>.row>.sportsNews{
+		width: 100%;
+	}
+}
+.container .row{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.container>.row .section .row p{
+	font-size: 13px;
+	float: left;
+	max-width: 320px;
+}
+.container>.row .section .row>.picRight{
+	/* position: relative;
+	right: 5px; */
+	
+	float: right;
+}
+.container>.row .section .row>.picRight>img{
+	max-width: 100%;
+}
+.container>.row .News .row-xs{
+	display: none;
+}
+@media screen and (max-width: 768px) {
+	.container>.row .News .row-md{
+		display: none!important;
+	}
+	.container>.row .News .row-xs{
+		display: block!important;
+		margin-top: 10px;
+	}
+}
+.container>.row .News .row-xs .mn{
+	max-width: 182px;
+	font-size: 13px;
+	float: left;
+	margin-top: 2px;
+}
+.container>.row .News .row-xs .mnPic>img{
+	float: right;
 }

@@ -8,6 +8,7 @@ require.config({
 		'navCtrl': '/javascripts/common/navCtrl',
 		'headCtrl': '/javascripts/common/headCtrl',
 		'serverInfoCtrl': '/javascripts/common/serverInfoCtrl',
+		'NewsCtrl': '/javascripts/common/NewsCtrl',
 	},
 	shim:{
 		'bootstrap':{
@@ -30,6 +31,7 @@ require([
 			'angular',
 			'app',
 			'nav',
+			'NewsCtrl',
 			'headCtrl',
 			'serverInfoCtrl',
 			'navCtrl',
