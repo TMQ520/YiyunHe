@@ -9,7 +9,7 @@ define(['app'], function (app) {
 	 			{url: '', val: '智能服务'},
 	 		],
 	 		right:[
-	 			{url: '', val: '登录'},
+	 			{url: '/users', val: '登录'},
 	 			{url: '', val: '注册'}
 	 		]
 	 	};

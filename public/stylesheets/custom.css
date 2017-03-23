@@ -2,6 +2,9 @@
 body{
 	font-family: 'Microsoft Yahei',"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+a{
+	text-decoration: none!important;
+}
 .navbar-brand>img{
 	width: 100px;
 	height: 40px;
@@ -26,7 +29,9 @@ body{
 .navbar-nav a{
 	cursor: pointer;
 }
-
+.business{
+	display: none;
+}
 @media screen and (min-width: 1302px) {	/*当屏幕大于1302px时*/
 	.navbar-right{
 		margin-right: 25%; 
@@ -86,6 +91,7 @@ body{
 
 .container>.row .section>p{
 	border-right: 3px solid #71b0fd;
+	/* margin-right: 2px; */
 }
 .container>.row .News>.row>h3{
 	font-size: 17px;
@@ -108,7 +114,9 @@ body{
 .container>.row .section .row p{
 	font-size: 13px;
 	float: left;
+	color: #9b9b9b;
 	max-width: 320px;
+	cursor: pointer;
 }
 .container>.row .section .row>.picRight{
 	/* position: relative;
@@ -130,6 +138,15 @@ body{
 		display: block!important;
 		margin-top: 10px;
 	}
+	.hidden-xss{
+		display: none!important;
+	}
+	.page{
+		display: none;
+	}
+	.pageXs{
+		display: block!important;
+	}
 }
 .container>.row .News .row-xs .mn{
 	max-width: 182px;
@@ -139,4 +156,197 @@ body{
 }
 .container>.row .News .row-xs .mnPic>img{
 	float: right;
+}
+.container>.row .section>.row>ul>li>a>span{
+	background: url('/images/btn_1.png') no-repeat;
+	width: 11px;
+	height: 19px;
+	float: left;
+	margin-right: 10px;
+}
+.container>.row .section>.row>ul>li>a{
+	text-decoration: none;
+	color: #9b9b9b;
+}
+.container>.row .section>.row>ul{
+	list-style: none;
+	padding-left: 0px;
+}
+.history>.hist>ul{
+	list-style: none;
+	padding-left: 0px;
+}
+.container>.row .history>.hist>ul a{
+	text-decoration: none;
+}
+.container>.row .history>.hist>ul a>img{
+	float: left;
+	margin-right: 5px;
+	/* width: 50%; */
+}
+.container>.row .history>.hist>ul>li{
+	margin-top: 40px;
+}
+.history>.hist>ul a>.right>p{
+	color: #9b9b9b;
+	font-size: 12px;
+}
+.container>.row .history>em{
+	border-bottom: 2px solid #9b9b9b;
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.page{
+	margin: 60px 0 0 0;
+	padding-bottom: 60px;
+	text-align: center;
+}
+.page a{
+	text-decoration: none;
+	color: #2d64b3;
+	margin: 0 8px;
+}
+.page .active{
+	color: #000;
+}
+.pageXs{
+	display: none;
+	font-size: 14px;
+}
+.wrap_container{
+	padding-top: 60px;
+	background-color: #e9ebee;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+	.container>.row .section .row>.picRight{
+		/* position: relative;
+		right: 0px; */
+		width: 50%;
+	}
+	.container>.row .section .row p{
+		width: 50%;
+	}
+	.container>.row .section>p{
+		font-size: 16px;
+	}
+	.container>.row .history>.hist>ul a>img{
+		width: 50%;
+	}
+	.history>.hist>ul a>.right>h6{
+		font-size: 12px;
+	}
+}
+
+.top_div{
+	background: #008ead;
+	width: 100%;
+	height: 400px;
+}
+.ipt{
+	border: 1px solid #d3d3d3;
+	padding: 10px 10px;
+	width: 290px;
+	border-radius: 4px;
+	padding-left: 35px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+.ipt:focus{
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.u_logo{
+	/* background: url("/images/username.png") no-repeat; */
+	padding: 10px 10px;
+	position: absolute;
+	top: 43px;
+	left: 40px;
+
+}
+.p_logo{
+	/* background: url("/images/password.png") no-repeat; */
+	padding: 10px 10px;
+	position: absolute;
+	top: 12px;
+	left: 40px;
+}
+.tou{
+	background: url("/images/tou.png") no-repeat;
+	width: 97px;
+	height: 92px;
+	position: absolute;
+	top: -87px;
+	left: 140px;
+}
+.left_hand{
+	background: url("/images/left_hand.png") no-repeat;
+	width: 32px;
+	height: 37px;
+	position: absolute;
+	top: -38px;
+	left: 150px;
+}
+.right_hand{
+	background: url("/images/right_hand.png") no-repeat;
+	width: 32px;
+	height: 37px;
+	position: absolute;
+	top: -38px;
+	right: -64px;
+}
+.initial_left_hand{
+	background: url("/images/hand.png") no-repeat;
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	top: -12px;
+	left: 100px;
+}
+.initial_right_hand{
+	background: url("/images/hand.png") no-repeat;
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	top: -12px;
+	right: -112px;
+}
+.left_handing{
+	background: url("/images/left-handing.png") no-repeat;
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	top: -24px;
+	left: 139px;
+}
+.right_handinging{
+	background: url("/images/right_handing.png") no-repeat;
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	top: -21px;
+	left: 210px;
+}
+@media screen and (max-width: 374px) {
+	.login{
+		width: 310px!important;	
+	}
+	.login>div{
+		    left: -30px!important;
+	}
+}
+@media screen and (width: 360px) {
+	.login>div{
+		    left: -10px!important;
+	}
+}
+@media screen and (max-width: 767px) {
+	.top_div{
+		height: 180px!important;
+	}
 }

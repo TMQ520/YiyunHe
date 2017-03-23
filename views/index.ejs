@@ -2,11 +2,14 @@
 <html>
 <head>
 	<title><%= title %></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel='stylesheet' href='/stylesheets/style.css' />
 	<link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
-	<link rel='stylesheet' href='/stylesheets/custom.css' />
+	<link rel='stylesheet' href='/stylesheets/custom.css'/>
+	<!-- <link rel='icon' href='/images/favicon.ico' /> -->
 	<script type="text/javascript" data-main='/javascripts/index/main' src='/requirejs/require.js'></script>
+	<meta name="renderer" content="webkit">
 </head>
 <body class="container-full">
 	<div ng-controller='navCtrl'>
@@ -24,75 +27,292 @@
 			<a ng-href="{{x.url}}">{{x.val}}</a>
 		</div>
 	</div>
-	<div class="container">
-		<!-- set images -->
-		<div class="row row-first">
-			<div class="col-md-12 column">
-				<img src="/images/bg_1.png">
+	<div class="wrap_container service">
+		<div class="container">
+			<!-- set images -->
+			<div class="row row-first">
+				<div class="col-md-12 column">
+					<img src="/images/bg_1.png">
+				</div>
+			</div>
+			<div class="row row-News">
+				<div class="col-md-8 col-xs-8 sportsNews">
+					<div class="News section" ng-controller="NewsCtrl">
+						<p>最新消息 / SPOT NEWS</p>
+						<!-- <div class="row row-md">
+							<h6>潮汐</h6>
+							<p>1、冬季多大风天气,内河船运要注意安全,控制船速和承载量2、在大风的作用下,河道曲直、宽窄、水流速度、船体特征、载重量、承载方式等的叠加,给评估大风与内河航运安全带来很大难度,国内较详细的描述风速风向与船舶航行速度的研究成果较少。3、不同类型和大小的船舶应对风浪的能力不一样,总体看4-5级风对航行有影响;5-6级已造成很大威胁。需要根据风速情况适时调整船舶航行速度甚至停运。风向与航道不一致时,易加剧风灾影响程度
+							</p>
+							<div class="picRight">
+								<img src="/images/tu1.png">
+							</div>
+						</div> -->
+						<div class="row row-md" ng-repeat="x in data.md">
+							<h6>{{x.title}}</h6>
+							<p>{{x.val}}</p>
+							<div class="picRight">
+								<img ng-src="{{x.url}}">
+							</div>
+						</div>
+						<div class="row row-md">
+							<h6>船闸</h6>
+							<p>
+								1、扬州启动船闸冬检<br>2、阜阳复线船闸工程选址方案专题会议召开<br>3、构建淮北水运大通道浍河南坪船闸建设现场见闻
+							</p>
+							<div class="picRight">
+								<img src="/images/tu2.png">
+							</div>
+						</div>
+						<!-- <div class="row row-xs">
+							<div class="mn">
+								<p>
+									冬季多大风天气,内河船运要注意安全,控制船速和承载量
+								</p>
+							</div>
+							<div class="mnPic">
+								<img src="/images/tu11.png">
+							</div>
+						</div> -->
+						<div ng-repeat="y in data.xs" class="row row-xs">
+							<div class="mn">
+								<p>{{y.val}}</p>
+							</div>
+							<div class="mnPic">
+								<img ng-src='{{y.url}}'>	
+							</div>
+						</div>
+						<!-- <div class="row row-xs">
+							<div class="mn">
+								<p>扬州启动船闸冬检,阜阳复线船闸工程选址方案专题会议召开
+								</p>
+							</div>
+							<div class="mnPic">
+								<img src="/images/tu22.png">
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-4 hidden-xss">
+					<div class="history section">
+						<p>分类/CATEGRIES</p>
+						<div class="row">
+							<ul>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>潮汐/ TIDE</h6>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>政务/ GOVERNMENT ADDAIRS</h6>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>船闸/ SHIP LOCK</h6>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>税务计算/ TAX COMPUTATION</h6>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<em></em>
+						<p>历史消息/HISTORY NEWS</p>
+						<div class="hist">
+							<ul>
+								<li>
+									<a href="">
+										<img src="/images/tu2-1.png">
+										<div class="right">
+											<h6>船闸/ SHIP LOCK</h6>
+											<p>
+												1、扬州启动船闸冬检<br>2、阜阳复线船闸工程选址方案专题会议召开
+											</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="/images/tu3-1.png">
+										<div class="right">
+											<h6>政务/ GOVERNMENT</h6>
+											<p>
+												1、内河航运市场秩序专项治理10月起实施<br>2、安庆市“五个治理”规范内河
+											</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row row-News">
-			<div class="col-md-8 col-xs-8 sportsNews">
-				<div class="News section" ng-controller="NewsCtrl">
-					<p>最新消息 / SPOT NEWS</p>
-					<!-- <div class="row row-md">
-						<h6>潮汐</h6>
-						<p>1、冬季多大风天气,内河船运要注意安全,控制船速和承载量2、在大风的作用下,河道曲直、宽窄、水流速度、船体特征、载重量、承载方式等的叠加,给评估大风与内河航运安全带来很大难度,国内较详细的描述风速风向与船舶航行速度的研究成果较少。3、不同类型和大小的船舶应对风浪的能力不一样,总体看4-5级风对航行有影响;5-6级已造成很大威胁。需要根据风速情况适时调整船舶航行速度甚至停运。风向与航道不一致时,易加剧风灾影响程度
-						</p>
-						<div class="picRight">
-							<img src="/images/tu1.png">
+		<div class="page">
+			<a href="">首页</a>
+			<a href="">上一页</a>
+			<a href="" class="active">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
+			<a href="">4</a>
+			<a href="">5</a>
+			<a href="">下一页</a>
+			<a href="">尾页</a>
+		</div>
+		<div class="page pageXs">
+			<a href="">上一页</a>
+			<a href="">下一页</a>
+		</div>
+	</div>
+	<div class="wrap_container business">
+		<div class="container">
+			<!-- set images -->
+			<div class="row row-first">
+				<div class="col-md-12 column">
+					<img src="/images/bg_1.png">
+				</div>
+			</div>
+			<div class="row row-News">
+				<div class="col-md-8 col-xs-8 sportsNews">
+					<div class="News section" ng-controller="NewsCtrl">
+						<p>最新消息 / SPOT NEWS</p>
+						<!-- <div class="row row-md">
+							<h6>潮汐</h6>
+							<p>1、冬季多大风天气,内河船运要注意安全,控制船速和承载量2、在大风的作用下,河道曲直、宽窄、水流速度、船体特征、载重量、承载方式等的叠加,给评估大风与内河航运安全带来很大难度,国内较详细的描述风速风向与船舶航行速度的研究成果较少。3、不同类型和大小的船舶应对风浪的能力不一样,总体看4-5级风对航行有影响;5-6级已造成很大威胁。需要根据风速情况适时调整船舶航行速度甚至停运。风向与航道不一致时,易加剧风灾影响程度
+							</p>
+							<div class="picRight">
+								<img src="/images/tu1.png">
+							</div>
+						</div> -->
+						<div class="row row-md" ng-repeat="x in data.md">
+							<h6>{{x.title}}</h6>
+							<p>{{x.val}}</p>
+							<div class="picRight">
+								<img ng-src="{{x.url}}">
+							</div>
 						</div>
-					</div> -->
-					<div class="row row-md" ng-repeat="x in data.md">
-						<h6>{{x.title}}</h6>
-						<p>{{x.val}}</p>
-						<div class="picRight">
-							<img ng-src="{{x.url}}">
-						</div>
-					</div>
-					<div class="row row-md">
-						<h6>船闸</h6>
-						<p>
-							1、扬州启动船闸冬检<br>2、阜阳复线船闸工程选址方案专题会议召开<br>3、构建淮北水运大通道浍河南坪船闸建设现场见闻
-						</p>
-						<div class="picRight">
-							<img src="/images/tu2.png">
-						</div>
-					</div>
-					<!-- <div class="row row-xs">
-						<div class="mn">
+						<div class="row row-md">
+							<h6>船闸</h6>
 							<p>
-								冬季多大风天气,内河船运要注意安全,控制船速和承载量
+								1、扬州启动船闸冬检<br>2、阜阳复线船闸工程选址方案专题会议召开<br>3、构建淮北水运大通道浍河南坪船闸建设现场见闻
 							</p>
+							<div class="picRight">
+								<img src="/images/tu2.png">
+							</div>
 						</div>
-						<div class="mnPic">
-							<img src="/images/tu11.png">
+						<!-- <div class="row row-xs">
+							<div class="mn">
+								<p>
+									冬季多大风天气,内河船运要注意安全,控制船速和承载量
+								</p>
+							</div>
+							<div class="mnPic">
+								<img src="/images/tu11.png">
+							</div>
+						</div> -->
+						<div ng-repeat="y in data.xs" class="row row-xs">
+							<div class="mn">
+								<p>{{y.val}}</p>
+							</div>
+							<div class="mnPic">
+								<img ng-src='{{y.url}}'>	
+							</div>
 						</div>
-					</div> -->
-					<div ng-repeat="y in data.xs" class="row row-xs">
-						<div class="mn">
-							<p>{{y.val}}</p>
+						<!-- <div class="row row-xs">
+							<div class="mn">
+								<p>扬州启动船闸冬检,阜阳复线船闸工程选址方案专题会议召开
+								</p>
+							</div>
+							<div class="mnPic">
+								<img src="/images/tu22.png">
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-4 hidden-xss">
+					<div class="history section">
+						<p>分类/CATEGRIES</p>
+						<div class="row">
+							<ul>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>潮汐/ TIDE</h6>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>政务/ GOVERNMENT ADDAIRS</h6>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>船闸/ SHIP LOCK</h6>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span></span>
+										<h6>税务计算/ TAX COMPUTATION</h6>
+									</a>
+								</li>
+							</ul>
 						</div>
-						<div class="mnPic">
-							<img ng-src='{{y.url}}'>	
+						<em></em>
+						<p>历史消息/HISTORY NEWS</p>
+						<div class="hist">
+							<ul>
+								<li>
+									<a href="">
+										<img src="/images/tu2-1.png">
+										<div class="right">
+											<h6>船闸/ SHIP LOCK</h6>
+											<p>
+												1、扬州启动船闸冬检<br>2、阜阳复线船闸工程选址方案专题会议召开
+											</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="/images/tu3-1.png">
+										<div class="right">
+											<h6>政务/ GOVERNMENT</h6>
+											<p>
+												1、内河航运市场秩序专项治理10月起实施<br>2、安庆市“五个治理”规范内河
+											</p>
+										</div>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<!-- <div class="row row-xs">
-						<div class="mn">
-							<p>扬州启动船闸冬检,阜阳复线船闸工程选址方案专题会议召开
-							</p>
-						</div>
-						<div class="mnPic">
-							<img src="/images/tu22.png">
-						</div>
-					</div> -->
 				</div>
 			</div>
-			<div class="col-md-4 col-xs-4 hidden-xs">
-				<div class="history section">
-					<p>分类/CATEGRIES</p>
-				</div>
-			</div>
+		</div>
+		<div class="page">
+			<a href="">首页</a>
+			<a href="">上一页</a>
+			<a href="" class="active">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
+			<a href="">4</a>
+			<a href="">5</a>
+			<a href="">下一页</a>
+			<a href="">尾页</a>
+		</div>
+		<div class="page pageXs">
+			<a href="">上一页</a>
+			<a href="">下一页</a>
 		</div>
 	</div>
 </body>
